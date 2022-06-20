@@ -1,0 +1,38 @@
+:root{
+    --disable-btn-bg:#a8baf7;
+    --disable-btn-txt: #0e2bff;
+    --navbar-bg:#2C2929;
+
+}
+.navbar-bg{
+    background: var(--navbar-bg);
+    padding: 1rem 1rem 0rem;
+
+}
+
+.qg-result-container{
+    width: 50%;
+    margin: auto;
+}
+.qg-result-description{
+   font-size: 1.3rem;
+   font-weight: 500;
+}
+.disable{
+    pointer-events: none;
+
+}
+.disable-text{
+    background: var(--disable-btn-bg);
+    color: var(--disable-btn-txt);
+    border: 1px;
+}
+
+
+@media screen and (max-width:700px) {
+   
+.qg-result-container{
+    width: 100%;
+}
+
+}
