@@ -1,0 +1,7 @@
+:root{
+    --card-bg:#F5F5F6;
+}
+
+.history-card{
+    background: var(--card-bg);
+}
