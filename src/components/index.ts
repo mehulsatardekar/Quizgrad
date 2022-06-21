@@ -1,0 +1,13 @@
+export {Login} from '../components/login/Login' ;
+export {Dashboard} from '../components/dashboard/Dashboard';
+export {Achievements} from '../components/achievements/Achievements';
+export {QuizCategories} from '../components/quiz-category/QuizCategories';
+ export {Navbar} from '../components/navbar/Navbar';
+export {Signup} from '../components/signup/Signup';
+ export {Profile} from '../components/profile/Profile';
+ export {QuizDetail} from '../components/quiz-detail/QuizDetail';
+ export {QuizQuestions} from '../components/quiz-question/QuizQuestions';
+ export {QuizMain} from '../components/quiz-question/QuizMain';
+ export {ResultAnswers} from '../components/result-answers/ResultAnswers';
+ export {Leaderboard} from '../components/leaderboard/Leaderboard';
+ export {History} from '../components/history/History';

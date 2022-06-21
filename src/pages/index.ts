@@ -1,0 +1,11 @@
+export {Landing} from '../pages/quiz-landing/Landing';
+export {LoginPage} from './login/LoginPage';
+export {DashboardPage} from './dashboard/DashboardPage';
+ export {CategoryPage} from './category/CategoryPage';
+export {SignupPage} from './signup/SignupPage';
+ export {ProfilePage} from './profilePage/ProfilePage';
+export {LeaderboardPage} from './leaderboard/LeaderboardPage';
+export {QuizrulePage} from './quizrule/QuizrulePage';
+export {QuizQuestionsPage} from './quizquestion/QuizQuestionsPage';
+export {QuizResultPage} from './quiz-result/QuizResultPage';
+export {HistoryPage} from './history/HistoryPage';
