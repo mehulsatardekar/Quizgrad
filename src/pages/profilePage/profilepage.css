@@ -1,0 +1,12 @@
+.profile{
+    display:flex;
+    flex-direction: column;
+}
+
+.user-update-profile{
+    /* height: 100%; */
+    border-radius: 2rem;
+    height:16rem;
+    max-height: 16.938rem;
+    object-fit: cover;
+}
