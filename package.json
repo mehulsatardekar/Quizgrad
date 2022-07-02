@@ -17,6 +17,7 @@
         "react-hot-toast": "^2.2.0",
         "react-router-dom": "^6.3.0",
         "supabase": "^0.5.0",
+        "uuid": "^8.3.2",
         "yup": "^0.32.11"
     },
     "devDependencies": {
