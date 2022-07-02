@@ -1,14 +1,11 @@
-import React from "react";
-
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
 import { supabase } from "../../../supabaseClient";
 import { useToast, useAuth } from "../../contexts";
 
 const Navbar = () => {
   const { notifyError } = useToast();
   const { currentUser } = useAuth();
-
   const navigate = useNavigate();
 
   const signoutUser = async () => {
