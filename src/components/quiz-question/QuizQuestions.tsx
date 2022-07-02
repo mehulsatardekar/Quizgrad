@@ -74,22 +74,13 @@ const QuizQuestions = ({
                       return (
                         <label
                           htmlFor={`ids_ ${index}`}
-                          className="btn-outline-primary btn btn-py-1 flex flex-justify-center gap"
+                          className={`btn-outline-primary btn btn-py-1 flex flex-justify-center gap ${
+                            index == optionSelected ? "option active" : "option"
+                          }`}
                           key={uuidv4()}
+                          onClick={() => setOptionSelected(index)}
                         >
                           {option}
-                          <input
-                            type="radio"
-                            className={`option-radio ${
-                              index == optionSelected
-                                ? "option active"
-                                : "option"
-                            }`}
-                            id={`ids_ ${index}`}
-                            name="ts"
-                            value={option}
-                            onClick={() => setOptionSelected(index)}
-                          />
                         </label>
                       );
                     })}

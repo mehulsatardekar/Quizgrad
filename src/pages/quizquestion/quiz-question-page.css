@@ -1,43 +1,47 @@
-
-.line-space-2{
-    line-height: 2rem;
+.line-space-2 {
+  line-height: 2rem;
 }
 
-.progress-bar{
-    width: 0%;
-    height:5px;
+.progress-bar {
+  width: 0%;
+  height: 5px;
 }
 
-.progress-bar.active{
-   animation: progress 10s linear ;
+.progress-bar.active {
+  animation: progress 10s linear;
 }
 
 @keyframes progress {
-    0% {
-        width:0%;
-        background:#555;
-    }
-    79% {
-        width: 79%;
-        background: #555;
-    }
+  0% {
+    width: 0%;
+    background: #555;
+  }
+  79% {
+    width: 79%;
+    background: #555;
+  }
 
-    80% {
-        width: 80%;
-        background: orangered;
-    }
+  80% {
+    width: 80%;
+    background: orangered;
+  }
 
-    100%{
-        width: 100;
-        background: orangered;
-    }
+  100% {
+    width: 100;
+    background: orangered;
+  }
 }
 
-.active{
+.option.active {
+  color: #fff;
   background: #1428cd;
-  color: aliceblue;    
 }
 
-.option-radio{
-    display: none;
+.active {
+  background: #1428cd;
+  color: aliceblue;
+}
+
+.option-radio {
+  display: none;
 }
