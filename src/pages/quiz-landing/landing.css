@@ -12,8 +12,6 @@ body {
   padding: 1rem 1rem 0rem;
 }
 
-
-
 .homepage-container {
   height: 100vh;
   display: flex;
@@ -36,12 +34,12 @@ body {
 
 .home-txt-descr {
   font-size: 1rem;
-  border-left: 2px solid #46178f;
+  border-left: 2px solid var(--body-bg);
   padding-left: 3px;
 }
 .home-banner {
   flex: 1;
-  background: #46178f;
+  background: var(--body-bg);
   background: url("https://images.weserv.nl/?url=https://res.cloudinary.com/dwhsfh3sc/image/upload/v1654103604/quiz-grad/assets/Illusttration_o3d6wd.png")
     no-repeat center;
   background-size: cover;
