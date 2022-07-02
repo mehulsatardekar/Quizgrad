@@ -1,0 +1,1 @@
+export {useAchievementDetail} from './user-achievement/getUserAchievement'
