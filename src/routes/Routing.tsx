@@ -31,42 +31,22 @@ const Routings = () => {
               <Route path="/" element={<Landing />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/category" element={<CategoryPage />} />
-              <Route
-                path="/dashboard"
-                element={
-                  <ProtectedRoute>
-                    <DashboardPage />
-                  </ProtectedRoute>
-                }
-              />
+
+              <Route element={<ProtectedRoute />}>
+                <Route path="/dashboard" element={<DashboardPage />} />
+                <Route
+                  path="/playquiz/:playquizid"
+                  element={<QuizQuestionsPage />}
+                />
+                <Route path="/result" element={<QuizResultPage />} />
+
+                <Route path="/history" element={<HistoryPage />} />
+              </Route>
+
               <Route path="/signup" element={<SignupPage />} />
               <Route path="/profile" element={<ProfilePage />} />
               <Route path="/leaderboard" element={<LeaderboardPage />} />
               <Route path="/quizrule/:quizid" element={<QuizrulePage />} />
-              <Route
-                path="/playquiz/:playquizid"
-                element={
-                  <ProtectedRoute>
-                    <QuizQuestionsPage />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/result"
-                element={
-                  <ProtectedRoute>
-                    <QuizResultPage />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/history"
-                element={
-                  <ProtectedRoute>
-                    <HistoryPage />
-                  </ProtectedRoute>
-                }
-              />
             </Routes>
           </QuizPlayData>
         </AuthContextData>
