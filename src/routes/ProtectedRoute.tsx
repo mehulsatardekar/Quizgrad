@@ -1,13 +1,12 @@
 import React, { FC } from "react";
-import { Navigate, useLocation } from "react-router-dom";
+import { Navigate, useLocation, Outlet } from "react-router-dom";
 import { supabase } from "../../supabaseClient";
 
-const ProtectedRoute = ({ children }: any) => {
-
+const ProtectedRoute = () => {
   const location = useLocation();
 
   return supabase.auth.session() ? (
-    children
+    <Outlet />
   ) : (
     <Navigate to="/login" state={{ from: location }} replace />
   );
