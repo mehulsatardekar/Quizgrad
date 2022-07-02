@@ -36,19 +36,6 @@ const Achievements = () => {
     getUserAchievements();
   }, []);
 
-  switch (userLevelDetails?.user_booster_level) {
-    case 3:
-      console.log("Added");
-
-      break;
-
-    case 33:
-      break;
-
-    case 100:
-      break;
-  }
-
   return (
     <div className="flex flex-column qg-flex-1 gap-1 mt-2 ">
       <div>
@@ -71,10 +58,14 @@ const Achievements = () => {
               </div>
             ))}
 
-        {userLevelDetails &&
+          {userLevelDetails &&
             (userLevelDetails.user_booster_level >= 50 ? (
               <div className="">
-                <img src={badges[2]} alt="Master-badge" title="Master In Knowledge badge" />
+                <img
+                  src={badges[2]}
+                  alt="Master-badge"
+                  title="Master In Knowledge badge"
+                />
               </div>
             ) : (
               <div className="filter">
@@ -87,7 +78,7 @@ const Achievements = () => {
             ))}
         </div>
         <div className="flex flex-align-item-center flex-justify-center">
-        {userLevelDetails &&
+          {userLevelDetails &&
             (userLevelDetails.user_booster_level >= 100 ? (
               <div className="">
                 <img src={badges[1]} alt="Nerdy-badge" title="Nerdy badge" />
@@ -102,10 +93,7 @@ const Achievements = () => {
               </div>
             ))}
         </div>
-        <a
-         
-          className="btn-primary btn btn-py-1 mt-3 flex flex-justify-center "
-        >
+        <a className="btn-primary btn btn-py-1 mt-3 flex flex-justify-center ">
           <span className="icon-default-pl">More Badges Are Coming</span>
         </a>
       </div>

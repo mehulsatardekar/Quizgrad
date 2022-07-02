@@ -23,7 +23,6 @@ const Signup = () => {
   const { currentUser } = useAuth();
   useEffect(() => {
     if (currentUser) {
-      window.location.reload();
       navigate("/dashboard", { replace: true });
     }
   }, []);
@@ -101,7 +100,7 @@ const Signup = () => {
             ],
             { returning: "minimal" }
           );
-           console.log(error?.message)
+          console.log(error?.message);
           if (error) throw error;
         } catch (error) {
           notifyError("error while initialize account in our database");
