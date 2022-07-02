@@ -1,0 +1,15 @@
+
+:root{
+    --table-head-bg: #F5F5F6;
+}
+.table{
+    width: 80%;
+}
+
+.table-head{
+  background: var(--table-head-bg);
+}
+
+.table-rows{
+    text-align: center;
+}
