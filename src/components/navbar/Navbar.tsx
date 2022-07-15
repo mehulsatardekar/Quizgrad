@@ -4,7 +4,7 @@ import { supabase } from "../../../supabaseClient";
 import { useToast, useAuth } from "../../contexts";
 
 const Navbar = () => {
-  const { notifyError } = useToast();
+  const { notifyError, notifySuccess } = useToast();
   const { currentUser } = useAuth();
   const navigate = useNavigate();
 
@@ -14,6 +14,7 @@ const Navbar = () => {
 
       if (error) throw error;
       navigate("/");
+      notifySuccess("you have been  successfully logout")
     } catch (error) {
       notifyError("oops Some error occured while signing out");
       console.error(error);
