@@ -23,7 +23,6 @@ const Login = () => {
   useEffect(() => {
     if (currentUser) {
       navigate("/dashboard", { replace: true });
-      //window.location.reload();
     }
   }, []);
 
@@ -50,7 +49,6 @@ const Login = () => {
       });
       if (user) {
         notifySuccess("You are successfully loged in.");
-        //console.log(currentUser?.currentSession?.user.id);
 
         if (session !== null) {
           setCurrentUser(session);
@@ -63,7 +61,6 @@ const Login = () => {
           navigate("/dashboard");
         }
 
-        // window.location.reload();
       }
       if (error) throw error;
     } catch (error) {
@@ -71,6 +68,31 @@ const Login = () => {
     }
   };
 
+  const guestLogin = async () => {
+    try {
+      const { user, session, error }: any = await supabase.auth.signIn({
+        email: "test@gmail.com",
+        password: "mehulSATARDEKAR1!",
+      });
+      if (user) {
+        notifySuccess("You are successfully loged in.");
+
+        if (session !== null) {
+          setCurrentUser(session);
+        }
+        if (location.state) {
+          console.log("huree");
+
+          navigate(location?.state?.from?.pathname, { replace: true });
+        } else {
+          navigate("/dashboard");
+        }
+      }
+      if (error) throw error;
+    } catch (error) {
+      notifyError(error.message);
+    }
+  };
   return (
     <>
       <Toaster position="bottom-center" reverseOrder={false} />
@@ -139,6 +161,9 @@ const Login = () => {
               </button>
             </Form>
           </Formik>
+          <button className="btn-outline-primary btn btn-py-1 flex flex-justify-center width-full " onClick={guestLogin}>
+            <span className="font-size-sm"> Login as guest </span>
+          </button>
           <div className="flex flex-justify-center  flex-align-item-center mt-1">
             <div className="flex flex-column  flex-align-item-center gap-1">
               <span className="font-ex-sm font-bold">OR</span>
