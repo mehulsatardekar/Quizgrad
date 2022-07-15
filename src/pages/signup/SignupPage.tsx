@@ -1,10 +1,15 @@
 import React from 'react'
+import { Toaster } from 'react-hot-toast'
 
 import { Signup } from '../../components'
 const SignupPage = () => {
   return (
-    <Signup/>
+    <>
+      <Toaster position="bottom-center" reverseOrder={false} />
+
+      <Signup />
+    </>
   )
 }
 
-export {SignupPage}
+export { SignupPage }

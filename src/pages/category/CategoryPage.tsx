@@ -30,21 +30,23 @@ const CategoryPage = () => {
   }, [setQuizData]);
 
   return (
-    <main className="container">
-      <Toaster />
-      <section className="flex flex-wrap flex-column   mt-3 mb-3">
-        <div className="flex flex-column gap-1 mb-3">
-          <span className="font-bold font-weight-800 font-sm">
-            Select Topic
-          </span>
-          <span className="font-md-light">Featured Category</span>
-        </div>
+    <>
+      <Toaster position="bottom-center" reverseOrder={false} />
+      <main className="container">
+        <section className="flex flex-wrap flex-column   mt-3 mb-3">
+          <div className="flex flex-column gap-1 mb-3">
+            <span className="font-bold font-weight-800 font-sm">
+              Select Topic
+            </span>
+            <span className="font-md-light">Featured Category</span>
+          </div>
 
-        <div className="flex flex-wrap gap flex-justify-center ">
-          <QuizCategories Categories={quizData} />
-        </div>
-      </section>
-    </main>
+          <div className="flex flex-wrap gap flex-justify-center ">
+            <QuizCategories Categories={quizData} />
+          </div>
+        </section>
+      </main>
+    </>
   );
 };
 

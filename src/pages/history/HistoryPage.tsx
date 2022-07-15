@@ -1,12 +1,17 @@
 import React from 'react'
 import '../history/historypage.css'
 import { History } from '../../components';
+import { Toaster } from 'react-hot-toast';
 const HistoryPage = () => {
   return (
-    <main className='container  pt-3'>
-      <History/>
-    </main>
+    <>
+      <Toaster position="bottom-center" reverseOrder={false} />
+
+      <main className='container  pt-3'>
+        <History />
+      </main>
+    </>
   )
 }
 
-export {HistoryPage}
+export { HistoryPage }
