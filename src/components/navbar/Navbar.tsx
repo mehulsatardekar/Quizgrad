@@ -25,11 +25,7 @@ const Navbar = () => {
     <nav className="navbar navbar-fixed flex flex-wrap flex-between  navbar-bg nav-zindex">
       <div className="flex flex-space-evenly flex-align-item-center ">
         <ul className=" text-deocration-none flex flex-wrap flex-align-item-center gap">
-          <li className="pb-1 nav-text navbar-white-text flex flex-align-item-center gap-1">
-            <span className="material-icons snackbar-icons  navbar-icons">
-              menu
-            </span>
-          </li>
+
           <Link
             to="/dashboard"
             className="text-deocration-none list-style-none"
