@@ -11,6 +11,12 @@ A quiz app where you can play multiple types of quiz and compete with other play
  
 </div>
 
+## Demo Of Quizgrad
+
+
+https://user-images.githubusercontent.com/36101139/179925476-096d631d-bd09-49c1-8d88-baca5148d2bc.mp4
+
+
 
 ## Features
 
